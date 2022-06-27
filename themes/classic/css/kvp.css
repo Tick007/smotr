@@ -1,0 +1,103 @@
+@CHARSET "UTF-8";
+.sidepanel {
+	border: 2px solid #1F6B75;
+	width: 300px;
+	/* height: 400px;*/
+	position: ABSOLUTE;
+	margin-top: 20px;
+	margin-left: 50px;
+	z-index: 10;
+	background-color: cornsilk;
+	opacity: .9;
+	-webkit-box-shadow: 10px 10px 34px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 34px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 34px 1px rgba(0, 0, 0, 0.75);
+}
+
+.sidepanel_left {
+	border: 2px solid #1F6B75;
+	width: 500px;
+	/* height: 400px;*/
+	position: ABSOLUTE;
+	margin-top: 20px;
+	margin-left: 50px;
+	z-index: 10;
+	background-color: cornsilk;
+	opacity: .9;
+	-webkit-box-shadow: 10px 10px 34px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 34px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 34px 1px rgba(0, 0, 0, 0.75);
+}
+
+.sidepanel2 {
+	border: 2px solid #1F6B75;
+	width: 300px;
+	/* height: 400px;*/
+	position: ABSOLUTE;
+	margin-top: 20px;
+	right: 0px;
+	margin-right: 50px;
+	z-index: 10;
+	background-color: cornsilk;
+	opacity: .9;
+	-webkit-box-shadow: 10px 10px 34px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 34px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 34px 1px rgba(0, 0, 0, 0.75);
+	word-break: break-word;
+}
+
+.sidepanel-title {
+	width: 100%;
+	font-size: 3em;
+	display: block;
+	text-align: center;
+}
+
+.sidepanel .panel_table {
+	opacity: 1;
+	max-width: 300px;
+}
+
+.sidepanel_left .panel_table {
+	opacity: 1;
+	max-width: 500px;
+	background-color:#000;
+}
+.sidepanel_left .panel_table tr{
+	background-color:#FFF;
+}
+
+.panel_table tr td:nth-child(2n) {
+	word-break: break-word;
+	overflow: auto;
+	max-width: 200px;
+}
+
+.panel_table img {
+	max-width: 100%;
+}
+
+li.selected{
+	color:#F00;
+	font-weight:bold;
+}
+
+ul.features_list li div{
+	display:inline-block;
+}
+
+.cart_empty{
+	background-image:url(/images/cart_empty.png);
+	background-size: contain;
+	width:20px;
+	height:20px;
+	cursor: pointer;
+}
+
+.cart_full{
+	background-image:url(/images/cart_full.png);
+	background-size: contain;
+	width:20px;
+	height:20px;
+	cursor: pointer;
+}

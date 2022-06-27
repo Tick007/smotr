@@ -1,0 +1,431 @@
+@font-face {
+  font-family: "LCD";
+  src: local("LCD"),
+  url(http://smotr/themes/classic/fonts/lcd/lcd2.ttf) format("truetype");
+}
+
+body{
+    font-size:12px;
+}
+
+h3{
+	 font-size:1.5em;
+}
+
+table{
+	    font-size: inherit;
+}
+
+.mydiv {
+	position: absolute;
+	z-index: 9;
+	background-color: #f1f1f1;
+	border: 1px solid #d3d3d3;
+	text-align: center;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.mydivheader {
+	padding: 10px;
+	cursor: move;
+	/*z-index: 10;*/
+	background-color: #2196F3;
+	color: #fff;
+}
+
+.formcontents {
+	margin: 10px;
+}
+
+.pname{
+	width:100px;
+	display: inline-block;
+	    text-align: left;
+}
+
+.p_name{
+		        white-space: nowrap;
+		        font-size:0.7em;
+}
+.p_value{
+	min-width: 50%;	
+	width: auto;
+}
+
+.orders_list {
+	max-height: 200px;
+	overflow-y: scroll;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+	background-color: #2196F3;
+	padding: 10px;
+}
+
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.compSchema {
+	-webkit-box-shadow: 5px 5px 15px 5px #000000;
+	box-shadow: 5px 5px 15px 5px #000000;
+	background-color: #FFF;
+	border: 5px groove #1C6EA4;
+	border-radius: 10px;
+	cursor: pointer;
+	width: auto;
+	margin: 0 auto;
+	font-family: LCD, Arial, Verdana;
+	padding: 5px;
+}
+
+.clock-container{
+    font-size:3em;
+    font-family: LCD;
+    
+}
+
+.rotate_clock{
+	  animation-name: clock;
+ animation-duration: 12s; /* or: Xms */
+ animation-iteration-count: infinite ;
+ animation-direction: normal; /* or: normal */
+ animation-timing-function: linear; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+ animation-fill-mode: forwards; /* or: backwards, both, none */
+ animation-delay: 0s; /* or: Xms */
+}
+
+.clock-container {
+  
+
+  
+  overflow: hidden;
+  display: grid;
+  width: 100%;
+  height: 80px;
+  font-family: LCD;
+  color: #00d6ff;
+  border-radius: 7px;
+}
+
+.background-clock {
+  box-shadow: inset 0px 0px 8px -1px #47d0ee;
+  z-index: 1;
+  grid-row: 1;
+  grid-column: 1;
+  display: grid;
+  background: #0d394e;
+  border-radius: 7px;
+  width: 97%;
+  height: 95%;
+  justify-self: center;
+  align-self: center;
+}
+
+.rotate-background {
+
+ animation-name: clock;
+ animation-duration: 12s; /* or: Xms */
+ animation-iteration-count: infinite ;
+ animation-direction: normal; /* or: normal */
+ animation-timing-function: linear; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+ animation-fill-mode: forwards; /* or: backwards, both, none */
+ animation-delay: 0s; /* or: Xms */
+
+  z-index: 1;
+  grid-row: 1;
+  grid-column: 1;
+  width: 200%;
+  height: 800%;
+  justify-self: center;
+  align-self: center;
+  background:  linear-gradient(to right, rgba(13,57,78,1) 0%, rgba(13,57,78,1) 45%, rgba(0,213,255,0.98) 49%, rgba(0,213,255,1) 51%, rgba(13,57,78,0.98) 55%, rgba(13,57,78,0.96) 100%);
+}
+@-webkit-keyframes clock
+{
+0% {-webkit-transform:rotate(0deg);}
+100% {-webkit-transform:rotate(360deg);}
+}
+
+.time-back{
+    grid-row:1;
+    grid-column:1;
+    opacity:0.1;
+    align-self:center;
+    justify-self:center;
+
+}
+.time{
+     grid-row:1;
+     grid-column:1;
+     color: #00d6ff;
+     align-self:center;
+     justify-self:center;
+
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  fill: white;
+  filter:url(#dropshadow);
+}
+.background-circle-1 {
+  fill:url(#Gradient-1);
+}
+.background-circle-2 {
+  fill:url(#Gradient-2);
+}
+
+.button-circle {
+  cursor: pointer;
+  fill: #285876;
+}
+
+.notequal{
+	background-color:yellow;
+}
+
+.flare {
+  fill: url(#Gradient-3);
+  filter: url(#blur);
+}
+.cyclogramList {
+	width:100%;
+	 display: block;
+	font: normal 10pt Arial,Helvetica,sans-serif;
+}
+
+
+
+.cyclogramList thead td{
+	width:auto;
+	}
+
+.cyclogramList tbody {
+	max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: block;
+}
+
+
+
+    
+    
+.cyclogramList tbody tr, .cyclogramContent tbody tr {
+	cursor: pointer;
+}
+.cyclogramList tbody tr td{
+	border-bottom:1px solid black;
+}
+.cyclogramList tbody tr.readonly{
+	background: rgb(224,240,246);
+background: linear-gradient(180deg, rgba(224,240,246,0.6867121848739496) 0%, rgba(68,150,224,0.989233193277311) 100%);
+}
+
+.cyclogramList tbody td, .cyclogramContent tbody td{
+	text-align:left;
+}
+.cyclogramList  thead td, .cyclogramContent thead td{
+	background-color: grey;
+	color:white;
+}
+
+.cyclogramHolder{
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.cyclogramHolder, .cyclogramControl{
+	display:inline-block;
+	text-align:left;
+	    font: normal 10pt Arial,Helvetica,sans-serif;
+}
+.cyclogramHolder{
+	width:80%;
+}
+.cyclogramControl{
+	width:20%;
+	float:right;
+}
+
+.cyclogramContent tbody tr.selectedCommand, .cyclogramContent tbody tr.selectedCommand:hover{
+	background: rgb(224,240,246);
+	background: linear-gradient(180deg, rgba(224,240,246,0.6867121848739496) 0%, rgba(68,224,141,0.989233193277311) 100%);
+	cursor: default;
+}
+
+td.selectedCyclogram{
+	background: rgb(224,240,246);
+	background: linear-gradient(180deg, rgba(224,240,246,0.6867121848739496) 0%, rgba(68,224,141,0.989233193277311) 100%);
+	cursor: default;
+}
+
+
+.cyclogramContent tbody tr:hover{
+	background-color:yellow;
+}
+
+.cyclogramWindow{
+	width:1280px;
+}
+
+.cyclorow_0{
+	background-image: url(/themes/classic/images/ajax-loader1.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.cyclorow_1{
+	background-image: url(/themes/classic/images/cancel-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.cyclorow_2{
+	background-image: url(/themes/classic/images/ok.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+
+.devstate{
+	color:#ffffff;
+	font-family:Verdana, Arial;
+	border: 2px solid #1C6EA4;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 4px -3px rgba(0,0,0,0.9); 
+	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 4px -3px rgba(0,0,0,0.9);
+	background: #07B3E0;
+	background: -moz-linear-gradient(top, #07B3E0 0%, #0C68C5 100%);
+	background: -webkit-linear-gradient(top, #07B3E0 0%, #0C68C5 100%);
+	background: linear-gradient(to bottom, #07B3E0 0%, #0C68C5 100%);
+
+}
+
+.commandDetails button{
+	width:100px;
+	height:50px;
+}
+
+.copycyclo{
+	border:none;
+	width:32px;
+	height:32px;
+	background-image: url(/images/copy.png);
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    position:relative;
+    z-index:10;
+    cursor: pointer;
+    background-color: transparent;
+}
+.copycyclo:hover, .deletecyclo:hover, .renamecyclo:hover{
+	-webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0); 
+	box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.deletecyclo{
+	border:none;
+	width:32px;
+	height:32px;
+	background-image: url(/images/delete.png);
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    position:relative;
+    z-index:10;
+    cursor: pointer;
+    background-color: transparent;
+}
+.renamecyclo{
+	border:none;
+	width:32px;
+	height:32px;
+	background-image: url(/images/edit20.png);
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    position:relative;
+    z-index:10;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.okBut{
+	border:none;
+	width:32px;
+	height:32px;
+	background-image: url(/images/apply.png);
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    position:relative;
+    z-index:10;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.cancellBut{
+		border:none;
+	width:32px;
+	height:32px;
+	background-image: url(/images/cancel.png);
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    position:relative;
+    z-index:10;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+input[type="button"].hidden{
+	display: none;
+
+}
+input[type="text"].nobeingEdited{
+	 pointer-events: none;
+	 color: #777777;
+     background-color: transparent;
+     border: 1px;
+     padding:1px solid transparent;
+     min-width: 90%;
+
+}
+input[type="text"].beingEdited{
+	 pointer-events: all;
+	 color: #000000;
+	 border: 1px solid #000000;
+	 padding:1px;
+	    min-width: 90%;
+}
+
+.matrixinputs span {
+    display: inline-block;
+    font-size: 14px;
+    width: 10.5%;
+    text-align: right;
+}
+
+td.matrixinputs{
+	text-align: left;
+}
+
+.commandDetails select{
+	max-width:200px;
+}
+

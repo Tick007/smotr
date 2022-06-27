@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Тег meta для указания кодировки -->
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <script src="http://vk.com/js/api/openapi.js"></script>
+<script>
+function checkVk() {
+    VK.init({
+        apiId: '5114001'
+    });
+    function authInfo(response) {
+        if (response.session) {
+            console.log(response.session.mid);
+        }
+    }
+    VK.Auth.getLoginStatus(authInfo);
+}
+checkVk();
+</script>
+</body>
+
+</html>
+

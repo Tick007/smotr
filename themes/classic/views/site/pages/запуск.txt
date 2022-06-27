@@ -1,0 +1,1 @@
+http://smotr/site/page?view=vktest
